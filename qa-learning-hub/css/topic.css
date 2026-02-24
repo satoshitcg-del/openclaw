@@ -8,7 +8,7 @@
 
 /* Topic Header */
 .topic-header {
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
     border-bottom: 1px solid var(--neutral-200);
     padding: var(--space-12) 0 var(--space-8);
 }
@@ -24,9 +24,9 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-1) var(--space-3);
+    padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-full);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -51,16 +51,16 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-1) var(--space-3);
+    padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-full);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
     background: rgba(37, 99, 235, 0.1);
     color: var(--primary);
 }
 
 .topic-header h1 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--space-4);
@@ -69,7 +69,7 @@
 }
 
 .topic-description {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 700px;
     line-height: 1.7;
@@ -82,19 +82,19 @@
 
 .topic-content .container {
     display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: var(--space-8);
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-10);
     align-items: start;
 }
 
-/* Table of Contents - Professional */
+/* Table of Contents */
 .toc {
     position: sticky;
     top: 80px;
     background: var(--bg-secondary);
     border: 1px solid var(--neutral-200);
     border-radius: var(--radius-lg);
-    padding: var(--space-5);
+    padding: var(--space-6);
 }
 
 .toc h3 {
@@ -124,6 +124,7 @@
     font-size: 0.9375rem;
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
+    line-height: 1.5;
 }
 
 .toc a:hover {
@@ -131,57 +132,64 @@
     background: var(--neutral-100);
 }
 
-/* Article Content */
+/* Article Content - Improved Readability */
 .content-body {
     max-width: 100%;
+    font-size: 1.0625rem;
+    line-height: 1.8;
 }
 
 .content-body section {
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-12);
 }
 
 .content-body h2 {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--space-5);
     padding-bottom: var(--space-3);
     border-bottom: 2px solid var(--neutral-200);
+    line-height: 1.3;
 }
 
 .content-body h3 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: var(--space-8) 0 var(--space-4);
+    line-height: 1.4;
 }
 
 .content-body h4 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: var(--space-6) 0 var(--space-3);
+    line-height: 1.4;
 }
 
 .content-body p {
     color: var(--text-secondary);
-    margin-bottom: var(--space-4);
-    line-height: 1.8;
+    margin-bottom: var(--space-5);
+    line-height: 1.9;
+    font-size: 1.0625rem;
 }
 
 .content-body ul,
 .content-body ol {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-5);
     padding-left: var(--space-6);
 }
 
 .content-body li {
     color: var(--text-secondary);
-    margin-bottom: var(--space-2);
-    line-height: 1.7;
+    margin-bottom: var(--space-3);
+    line-height: 1.8;
+    font-size: 1.0625rem;
 }
 
-/* Tables - Professional */
+/* Tables */
 .content-body table {
     width: 100%;
     border-collapse: collapse;
@@ -191,23 +199,25 @@
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    font-size: 1rem;
 }
 
 .content-body th {
     background: var(--neutral-50);
     color: var(--text-primary);
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     text-align: left;
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-4) var(--space-5);
     border-bottom: 1px solid var(--neutral-200);
 }
 
 .content-body td {
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-4) var(--space-5);
     border-bottom: 1px solid var(--neutral-100);
     color: var(--text-secondary);
-    font-size: 0.9375rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .content-body tr:last-child td {
@@ -218,22 +228,22 @@
     background: var(--neutral-50);
 }
 
-/* Code Blocks - Professional */
+/* Code Blocks */
 .code-block {
-    background: var(--bg-code);
+    background: #1e293b;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    margin: var(--space-5) 0;
+    margin: var(--space-6) 0;
     position: relative;
 }
 
 .code-block pre {
-    padding: var(--space-5);
+    padding: var(--space-6);
     margin: 0;
     overflow-x: auto;
     font-family: var(--font-mono);
-    font-size: 0.875rem;
-    line-height: 1.7;
+    font-size: 0.9375rem;
+    line-height: 1.8;
     color: #e2e8f0;
 }
 
@@ -248,9 +258,9 @@
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: var(--neutral-400);
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-md);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -267,16 +277,16 @@
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-family: var(--font-mono);
-    font-size: 0.875em;
+    font-size: 0.9375em;
 }
 
-/* Info Boxes */
+/* Info Boxes - Softer */
 .info-box,
 .tip-box,
 .warning-box {
-    padding: var(--space-5);
+    padding: var(--space-6);
     border-radius: var(--radius-lg);
-    margin: var(--space-5) 0;
+    margin: var(--space-6) 0;
     border-left: 4px solid;
 }
 
@@ -298,7 +308,7 @@
 .info-box h4,
 .tip-box h4,
 .warning-box h4 {
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--space-3);
     margin-top: 0;
@@ -316,21 +326,28 @@
     color: var(--warning);
 }
 
+.info-box p,
+.tip-box p,
+.warning-box p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
 /* Diagrams */
 .diagram {
     background: var(--neutral-50);
     border: 1px solid var(--neutral-200);
     border-radius: var(--radius-lg);
-    padding: var(--space-5);
-    margin: var(--space-5) 0;
+    padding: var(--space-6);
+    margin: var(--space-6) 0;
     overflow-x: auto;
 }
 
 .diagram pre {
     margin: 0;
     font-family: var(--font-mono);
-    font-size: 0.875rem;
-    line-height: 1.6;
+    font-size: 0.9375rem;
+    line-height: 1.8;
     color: var(--text-secondary);
 }
 
@@ -351,7 +368,7 @@
     position: absolute;
     left: 0;
     color: var(--neutral-400);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
 /* Cards Grid */
@@ -395,7 +412,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
     margin-bottom: var(--space-3);
 }
 
@@ -403,7 +422,7 @@
 .tool-card h4,
 .method-card h4,
 .role-card h4 {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--space-2);
@@ -451,6 +470,7 @@
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--space-4);
+    font-size: 1.0625rem;
 }
 
 .quiz-options {
@@ -572,8 +592,16 @@
         padding: var(--space-8) 0 var(--space-6);
     }
     
+    .content-body {
+        font-size: 1rem;
+    }
+    
     .content-body h2 {
-        font-size: 1.5rem;
+        font-size: 1.625rem;
+    }
+    
+    .content-body h3 {
+        font-size: 1.375rem;
     }
     
     .tips-grid,
