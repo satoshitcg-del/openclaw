@@ -576,6 +576,45 @@
     color: var(--primary);
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .topic-header {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    
+    .topic-level-badge.beginner {
+        background: rgba(52, 211, 153, 0.15);
+        color: var(--beginner);
+    }
+    
+    .topic-level-badge.intermediate {
+        background: rgba(251, 191, 36, 0.15);
+        color: var(--intermediate);
+    }
+    
+    .topic-level-badge.advanced {
+        background: rgba(248, 113, 113, 0.15);
+        color: var(--advanced);
+    }
+    
+    .topic-category {
+        background: rgba(96, 165, 250, 0.15);
+        color: var(--primary);
+    }
+    
+    .code-block {
+        background: #020617;
+    }
+    
+    .quiz-feedback .correct {
+        background: rgba(52, 211, 153, 0.15);
+    }
+    
+    .quiz-feedback .incorrect {
+        background: rgba(248, 113, 113, 0.15);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .topic-content .container {

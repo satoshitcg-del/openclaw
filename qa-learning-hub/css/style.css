@@ -645,6 +645,192 @@ p {
     font-size: 0.875rem;
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Colors */
+        --primary: #60a5fa;
+        --primary-dark: #3b82f6;
+        --primary-light: #93c5fd;
+        --primary-soft: rgba(96, 165, 250, 0.15);
+        
+        /* Dark Neutrals - Blue-gray tones */
+        --neutral-50: #0f172a;
+        --neutral-100: #1e293b;
+        --neutral-200: #334155;
+        --neutral-300: #475569;
+        --neutral-400: #64748b;
+        --neutral-500: #94a3b8;
+        --neutral-600: #cbd5e1;
+        --neutral-700: #e2e8f0;
+        --neutral-800: #f1f5f9;
+        --neutral-900: #f8fafc;
+        
+        /* Dark Backgrounds */
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --bg-card: #1e293b;
+        --bg-code: #020617;
+        
+        /* Dark Text */
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-tertiary: #94a3b8;
+        --text-muted: #64748b;
+        --text-on-dark: #0f172a;
+        
+        /* Dark Status Colors - Brighter for visibility */
+        --beginner: #34d399;
+        --intermediate: #fbbf24;
+        --advanced: #f87171;
+        --success: #34d399;
+        --warning: #fbbf24;
+        --error: #f87171;
+        --info: #60a5fa;
+        
+        /* Dark Gradients */
+        --gradient-hero: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        
+        /* Dark Shadows */
+        --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Dark Mode Specific Styles */
+    .navbar {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom-color: var(--neutral-200);
+    }
+    
+    .nav-menu {
+        background: var(--bg-secondary);
+        border-bottom-color: var(--neutral-200);
+    }
+    
+    .hero::before {
+        background: 
+            radial-gradient(ellipse 60% 40% at 80% 20%, rgba(96, 165, 250, 0.1), transparent),
+            radial-gradient(ellipse 50% 30% at 20% 80%, rgba(139, 92, 246, 0.08), transparent);
+    }
+    
+    .hero-badge {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .btn-secondary {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+        color: var(--text-primary);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--neutral-100);
+        border-color: var(--neutral-300);
+    }
+    
+    .topic-card {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .topic-card:hover {
+        border-color: var(--primary);
+    }
+    
+    .topic-icon {
+        background: var(--primary-soft);
+    }
+    
+    .roadmap-phase {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .progress-card {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .toc {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .quiz-options label {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .quiz-options label:hover {
+        background: var(--neutral-100);
+    }
+    
+    .nav-prev,
+    .nav-next {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .code-block {
+        background: #020617;
+    }
+    
+    .content-body code {
+        background: var(--neutral-100);
+        color: var(--primary-light);
+    }
+    
+    .info-box {
+        background: rgba(96, 165, 250, 0.1);
+    }
+    
+    .tip-box {
+        background: rgba(52, 211, 153, 0.1);
+    }
+    
+    .warning-box {
+        background: rgba(251, 191, 36, 0.1);
+    }
+    
+    .diagram {
+        background: var(--neutral-100);
+    }
+    
+    .checklist li::before {
+        color: var(--neutral-400);
+    }
+    
+    .tip-card,
+    .tool-card,
+    .method-card,
+    .role-card {
+        background: var(--bg-secondary);
+        border-color: var(--neutral-200);
+    }
+    
+    .tip-icon,
+    .method-icon,
+    .role-icon {
+        background: var(--primary-soft);
+    }
+    
+    .content-body table {
+        background: var(--bg-secondary);
+    }
+    
+    .content-body th {
+        background: var(--neutral-100);
+    }
+    
+    .content-body tr:hover td {
+        background: var(--neutral-100);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-menu {
