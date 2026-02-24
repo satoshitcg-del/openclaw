@@ -228,13 +228,14 @@
     background: var(--neutral-50);
 }
 
-/* Code Blocks */
+/* Code Blocks - Improved Syntax Highlighting */
 .code-block {
-    background: #1e293b;
+    background: #0d1117;
     border-radius: var(--radius-lg);
     overflow: hidden;
     margin: var(--space-6) 0;
     position: relative;
+    border: 1px solid #30363d;
 }
 
 .code-block pre {
@@ -243,12 +244,92 @@
     overflow-x: auto;
     font-family: var(--font-mono);
     font-size: 0.9375rem;
-    line-height: 1.8;
-    color: #e2e8f0;
+    line-height: 1.9;
+    color: #e6edf3;
+    background: #0d1117;
 }
 
 .code-block code {
     font-family: var(--font-mono);
+    color: #e6edf3;
+}
+
+/* Syntax Highlighting Colors - High Contrast */
+.code-block .language-javascript,
+.code-block .language-python,
+.code-block .language-bash,
+.code-block .language-gherkin {
+    color: #e6edf3;
+}
+
+/* Comments - Gray */
+.code-block code:contains("//"),
+.code-block code:contains("#") {
+    color: #8b949e;
+}
+
+/* Strings - Green */
+.code-block code .string,
+.code-block code:contains('"') {
+    color: #a5d6ff;
+}
+
+/* Keywords - Purple/Pink */
+.code-block .keyword,
+.code-block code:contains("const"),
+.code-block code:contains("let"),
+.code-block code:contains("var"),
+.code-block code:contains("function"),
+.code-block code:contains("return"),
+.code-block code:contains("if"),
+.code-block code:contains("else"),
+.code-block code:contains("for"),
+.code-block code:contains("while"),
+.code-block code:contains("async"),
+.code-block code:contains("await"),
+.code-block code:contains("import"),
+.code-block code:contains("export"),
+.code-block code:contains("class"),
+.code-block code:contains("def"),
+.code-block code:contains("pm.test"),
+.code-block code:contains("pm.expect") {
+    color: #ff7b72;
+}
+
+/* Functions - Blue */
+.code-block .function,
+.code-block code:contains("test("),
+.code-block code:contains("expect("),
+.code-block code:contains("json()") {
+    color: #d2a8ff;
+}
+
+/* Numbers - Orange */
+.code-block .number {
+    color: #79c0ff;
+}
+
+/* Properties - Light Blue */
+.code-block code:contains("status"),
+.code-block code:contains("headers"),
+.code-block code:contains("body") {
+    color: #7ee787;
+}
+
+/* Method calls - Yellow */
+.code-block code:contains(".to.have"),
+.code-block code:contains(".to.be"),
+.code-block code:contains(".to.eql") {
+    color: #ffa657;
+}
+
+/* Brackets and punctuation - Light gray */
+.code-block code:contains("{"),
+.code-block code:contains("}"),
+.code-block code:contains("("),
+.code-block code:contains(")"),
+.code-block code:contains("[") {
+    color: #c9d1d9;
 }
 
 .copy-code-btn {
