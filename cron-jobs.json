@@ -1,0 +1,17 @@
+{
+  "jobs": [
+    {
+      "id": "qa-learning-hub-monitor",
+      "name": "QA Learning Hub Auto-Continue",
+      "description": "ตรวจสอบว่ามีหน้า topic ที่ยังสร้างไม่ครบใน QA Learning Hub หรือไม่ ถ้ามีให้สั่งทำงานต่อ",
+      "schedule": "*/10 * * * *",
+      "enabled": true,
+      "agentId": "main",
+      "target": "isolated",
+      "wakeMode": "now",
+      "task": "ตรวจสอบโฟลเดอร์ qa-learning-hub/topics/ ว่ามีไฟล์ครบ 24 หนัวข้อหรือไม่ ตามรายการใน index.html ถ้ายังไม่ครบ ให้สร้างหน้าที่ขาดหายไปให้เสร็จ โดยใช้รูปแบบเดียวกับหน้าที่มีอยู่แล้ว",
+      "maxRuns": 100,
+      "notifyOnComplete": true
+    }
+  ]
+}
