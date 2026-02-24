@@ -228,13 +228,14 @@
     background: var(--neutral-50);
 }
 
-/* Code Blocks - Plain, No Syntax Highlighting */
+/* Code Blocks - VS Code Style Syntax Highlighting */
 .code-block {
-    background: var(--neutral-800);
+    background: #1e1e1e;
     border-radius: var(--radius-lg);
     overflow: hidden;
     margin: var(--space-6) 0;
     position: relative;
+    border: 1px solid #333;
 }
 
 .code-block pre {
@@ -243,27 +244,63 @@
     overflow-x: auto;
     font-family: var(--font-mono);
     font-size: 0.9375rem;
-    line-height: 1.9;
-    color: var(--neutral-100);
-    background: var(--neutral-800);
+    line-height: 1.8;
+    color: #d4d4d4;
+    background: #1e1e1e;
 }
 
 .code-block code {
     font-family: var(--font-mono);
-    color: var(--neutral-100);
+    color: #d4d4d4;
 }
 
-/* Remove all syntax highlighting colors - everything same color */
-.code-block .language-javascript,
-.code-block .language-python,
-.code-block .language-bash,
-.code-block .language-gherkin,
-.code-block .keyword,
-.code-block .function,
+/* Comments - Green */
+.code-block .comment,
+.code-block code span[style*="comment"],
+.code-block code:has(.comment) {
+    color: #6a9955 !important;
+}
+
+/* Strings - Orange/Brown */
 .code-block .string,
+.code-block code span[style*="string"],
+.code-block code:has(.string) {
+    color: #ce9178 !important;
+}
+
+/* Keywords - Blue */
+.code-block .keyword,
+.code-block code span[style*="keyword"],
+.code-block code:has(.keyword) {
+    color: #569cd6 !important;
+}
+
+/* Functions - Yellow */
+.code-block .function,
+.code-block code span[style*="function"],
+.code-block code:has(.function) {
+    color: #dcdcaa !important;
+}
+
+/* Numbers - Light Green */
 .code-block .number,
-.code-block code * {
-    color: var(--neutral-100) !important;
+.code-block code span[style*="number"],
+.code-block code:has(.number) {
+    color: #b5cea8 !important;
+}
+
+/* Variables/Properties - Light Blue */
+.code-block .property,
+.code-block code span[style*="property"],
+.code-block code:has(.property) {
+    color: #9cdcfe !important;
+}
+
+/* Operators - White */
+.code-block .operator,
+.code-block code span[style*="operator"],
+.code-block code:has(.operator) {
+    color: #d4d4d4 !important;
 }
 
 .copy-code-btn {
@@ -618,12 +655,12 @@
     }
     
     .code-block {
-        background: #1a1a1a;
+        background: #1e1e1e;
     }
     
     .code-block pre,
     .code-block code {
-        color: #e5e5e5;
+        color: #d4d4d4;
     }
     
     .quiz-feedback .correct {
