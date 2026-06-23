@@ -1,0 +1,29 @@
+name: Telegram PR Notification
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram Message
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          PR_USER="${{ github.event.pull_request.user.login }}"
+          PR_BRANCH="${{ github.head_ref }}"
+          PR_ACTION="${{ github.event.action }}"
+
+          curl -s -X POST "https://api.telegram.org/bot8976280418:AAFE8scsZBtYiuTPXZpmq8Ix9e8wy40Pcc4/sendMessage" \
+            -d "chat_id=-1003289317192" \
+            -d "message_thread_id=8" \
+            -d "text=🔔 *PR #$PR_NUMBER - $PR_ACTION*
+
+📝 $PR_TITLE
+👤 @$PR_USER
+🌿 $PR_BRANCH
+🔗 $PR_URL" \
+            -d "parse_mode=Markdown"
