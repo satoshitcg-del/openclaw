@@ -1,6 +1,6 @@
 {
   "jobs": [
-    {
+    { 
       "id": "qa-learning-hub-monitor",
       "name": "QA Learning Hub Auto-Continue",
       "description": "ตรวจสอบว่ามีหน้า topic ที่ยังสร้างไม่ครบใน QA Learning Hub หรือไม่ ถ้ามีให้สั่งทำงานต่อ",
